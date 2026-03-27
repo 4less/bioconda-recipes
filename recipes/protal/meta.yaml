@@ -1,13 +1,23 @@
 {% set name = "protal" %}
 {% set version = "0.2.1a" %}
+{% set commit = "a0ce666" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
-source:
+
+{# source:
   url: https://github.com/4less/protal/archive/refs/tags/{{version}}.tar.gz
-  sha256: a07242ceb139f236de3118189c764cb3365634ce6095efe364a99abe5dbc601d
+  sha256: a07242ceb139f236de3118189c764cb3365634ce6095efe364a99abe5dbc601d #}
+
+
+
+source:
+  url: https://github.com/4less/protal/archive/{{ commit }}.tar.gz
+  sha256: b02bc14aee4433e204028a1981003d7a0ee2711420625505764d57e28d0e9c67
+
+
 
 build:
   skip: true  # [osx]
